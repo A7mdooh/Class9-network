@@ -251,15 +251,15 @@ const quizData = [
     }
 
     {
-    question: "ما هو سلك متحد المحور (Coaxial Cable) المستخدم في الشبكات؟",
-    answers: [
+        question: "ما هو سلك متحد المحور (Coaxial Cable) المستخدم في الشبكات؟",
+        answers: [
         "كابل يستخدم لنقل البيانات والإشارات عبر الأسلاك المحورية",
         "كابل يستخدم لتوصيل الأجهزة عبر الشبكة اللاسلكية",
         "كابل يتميز بسرعة نقل البيانات داخل الشبكات الضوئية",
         "كابل يستخدم فقط لنقل الطاقة الكهربائية"
-    ],
-    correctAnswer: 0, // الإجابة الصحيحة هي "كابل يستخدم لنقل البيانات والإشارات عبر الأسلاك المحورية"
-    image: "<div style='text-align: center; margin-top: 20px;'><img src='assets/images/Coaxial.jpg' alt='Coaxial Cable' style='max-width: 100%; height: auto; display: block; margin: 0 auto;' /></div>"
+        ],
+        correctAnswer: 0, // الإجابة الصحيحة هي "كابل يستخدم لنقل البيانات والإشارات عبر الأسلاك المحورية"
+        image: "<div style='text-align: center; margin-top: 20px;'><img src='assets/images/Coaxial.jpg' alt='Coaxial Cable' style='max-width: 100%; height: auto; display: block; margin: 0 auto;' /></div>"
 }
 
 ];
