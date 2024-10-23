@@ -29,6 +29,17 @@ const quizData = [
         ],
         correctAnswer: 1
     },
+{
+    question: "تُعرف الشبكة السلكية باسم..",
+    answers: [
+        "الإنترنت",
+        "واي فاي",
+        "إيثرنت",
+        "وايرلس"
+    ],
+    correctAnswer: 2
+}
+
     {
         question: "ما هو سلك متحد المحور المستخدم في الشبكات؟",
         answers: [
