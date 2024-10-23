@@ -28,7 +28,7 @@ const quizData = [
             "كابل يستخدم فقط لنقل الطاقة الكهربائية"
         ],
         correctAnswer: 0,
-        image: "assets/images/Coaxial.jpg" // المسار الصحيح للصورة
+        image: "assets/images/Coaxial.jpg"
     },
     {
         question: "ما هو الجهاز الذي يستخدم لإيصال جهاز الحاسوب بشبكة الإنترنت؟",
@@ -101,7 +101,7 @@ const quizData = [
         correctAnswer: 1
     },
     {
-        question: "أي من الأجهزة التالية يُستخدم لتقسيم الشبكة وتوجيه البيانات بناءً على عناوين ماك  ؟",
+        question: "أي من الأجهزة التالية يُستخدم لتقسيم الشبكة وتوجيه البيانات بناءً على عناوين ماك؟",
         answers: [
             "الموجه (Router)",
             "المحول (Switch)",
@@ -121,7 +121,7 @@ const quizData = [
         correctAnswer: 1
     },
     {
-        question: "أي من الأوامر التالية يُستخدم لعرض إعدادات الشبكة في نظام وندوز ؟",
+        question: "أي من الأوامر التالية يُستخدم لعرض إعدادات الشبكة في نظام وندوز؟",
         answers: [
             "ipconfig",
             "ping",
@@ -131,7 +131,6 @@ const quizData = [
         correctAnswer: 0
     }
 ];
-
 
 let currentQuestionIndex = 0;
 let correctAnswers = 0;
