@@ -28,12 +28,33 @@ const quizData = [
             "كابل يستخدم فقط لنقل الطاقة الكهربائية"
         ],
         correctAnswer: 0,
-        image: "<div style='text-align: center; margin-top: 20px;'><img src='assets/images/Coaxial.jpg' alt='Coaxial Cable' style='max-width: 100%; height: auto; display: block; margin: 0 auto;' /></div>"
+        image: "assets/images/Coaxial.jpg" // المسار الصحيح للصورة
     }
 ];
 
-// بقية الكود الخاص بالتعامل مع عرض الأسئلة وإجابات المستخدم يبقى كما هو
+// تعديل دالة عرض السؤال لإظهار الصورة إذا كانت موجودة
+function showQuestion() {
+    const questionElement = document.getElementById("question");
+    const questionNumberElement = document.getElementById("question-number");
+    const questionImageElement = document.getElementById("question-image");
+    const questionData = quizData[currentQuestionIndex];
 
+    questionNumberElement.innerText = `السؤال ${currentQuestionIndex + 1} من ${quizData.length}`;
+    questionElement.innerText = questionData.question;
+
+    // تحقق من وجود الصورة
+    if (questionData.image) {
+        questionImageElement.src = questionData.image;
+        questionImageElement.style.display = "block";
+        questionImageElement.style.maxWidth = "100%";
+        questionImageElement.style.height = "auto";
+        questionImageElement.style.margin = "20px auto";
+    } else {
+        questionImageElement.style.display = "none";
+    }
+
+    // باقي كود عرض الإجابات
+}
 
 let currentQuestionIndex = 0;
 let correctAnswers = 0;
