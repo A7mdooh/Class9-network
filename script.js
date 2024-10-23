@@ -9,16 +9,16 @@ const quizData = [
         ],
         correctAnswer: 3
     },
-	{
-    question: "عبارة عن قطعة إلكترونية تكون مثبتة على اللوحة الأم عبر شقوق التوسعة تعمل على ربط جهاز الحاسوب مع الشبكة:",
-    answers: [
-        "بطاقة الرسومات",
-        "بطاقة الشبكة",
-        "بطاقة الصوت",
-        "مشغل الأقراص المرنة"
-    ],
-    correctAnswer: 1
-}
+    {
+        question: "عبارة عن قطعة إلكترونية تكون مثبتة على اللوحة الأم عبر شقوق التوسعة تعمل على ربط جهاز الحاسوب مع الشبكة:",
+        answers: [
+            "بطاقة الرسومات",
+            "بطاقة الشبكة",
+            "بطاقة الصوت",
+            "مشغل الأقراص المرنة"
+        ],
+        correctAnswer: 1
+    },
     {
         question: "ما الذي يُمكن تحقيقه من خلال استخدام شبكة الحاسوب؟",
         answers: [
@@ -29,17 +29,16 @@ const quizData = [
         ],
         correctAnswer: 1
     },
-{
-    question: "تُعرف الشبكة السلكية باسم..",
-    answers: [
-        "الإنترنت",
-        "واي فاي",
-        "إيثرنت",
-        "وايرلس"
-    ],
-    correctAnswer: 2
-}
-
+    {
+        question: "تُعرف الشبكة السلكية باسم..",
+        answers: [
+            "الإنترنت",
+            "واي فاي",
+            "إيثرنت",
+            "وايرلس"
+        ],
+        correctAnswer: 2
+    },
     {
         question: "ما هو سلك متحد المحور المستخدم في الشبكات؟",
         answers: [
@@ -111,7 +110,6 @@ const quizData = [
         ],
         correctAnswer: 1
     },
-	
     {
         question: "ما هو نوع الكابل الموضح في الصورة أدناه؟",
         answers: [
@@ -153,7 +151,6 @@ const quizData = [
         ],
         correctAnswer: 1
     },
-	
     {
         question: "ما هو نوع الكابل الموضح في الصورة أدناه؟",
         answers: [
@@ -195,8 +192,9 @@ const quizData = [
         ],
         correctAnswer: 3,
         image: "assets/images/UPT.jpg"
-    },
+    }
 ];
+
 
 let currentQuestionIndex = 0;
 let correctAnswers = 0;
