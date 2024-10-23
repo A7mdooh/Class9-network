@@ -7,7 +7,7 @@ const quizData = [
             "توصيل الأجهزة معًا ضمن شبكة محلية دون السماح بتبادل البيانات",
             "تكوين بنية تحتية تربط جهازين أو أكثر لتمكين تبادل البيانات والموارد بشكل فعال"
         ],
-        correctAnswer: 3,
+        correctAnswer: 3
     },
     {
         question: "ما الذي يُمكن تحقيقه من خلال استخدام شبكة الحاسوب؟",
@@ -17,7 +17,7 @@ const quizData = [
             "زيادة سرعة المعالجة في الأجهزة بشكل منفصل",
             "تخزين البيانات بشكل مركزي دون إمكانية الوصول إليها من الأجهزة الأخرى"
         ],
-        correctAnswer: 1,
+        correctAnswer: 1
     },
     {
         question: "ما هو سلك متحد المحور (Coaxial Cable) المستخدم في الشبكات؟",
@@ -29,32 +29,109 @@ const quizData = [
         ],
         correctAnswer: 0,
         image: "assets/images/Coaxial.jpg" // المسار الصحيح للصورة
+    },
+    {
+        question: "ما هو الجهاز الذي يستخدم لإيصال جهاز الحاسوب بشبكة الإنترنت؟",
+        answers: [
+            "المودم",
+            "الموجه (Router)",
+            "المحول (Switch)",
+            "نقطة الوصول (Access Point)"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "أي من الأنواع التالية يُعد نوعًا من الشبكات التي تغطي مناطق جغرافية صغيرة جدًا، مثل المنازل والمكاتب الصغيرة؟",
+        answers: [
+            "الشبكة المحلية (LAN)",
+            "الشبكة الواسعة (WAN)",
+            "الشبكة الشخصية (PAN)",
+            "شبكة المدينة (MAN)"
+        ],
+        correctAnswer: 0
+    },
+    {
+        question: "أي بروتوكول يُستخدم لتعيين عنوان IP تلقائيًا للأجهزة المتصلة بالشبكة؟",
+        answers: [
+            "DNS",
+            "DHCP",
+            "FTP",
+            "HTTP"
+        ],
+        correctAnswer: 1
+    },
+    {
+        question: "ما هو عنوان MAC؟",
+        answers: [
+            "عنوان يستخدم للوصول إلى الإنترنت",
+            "عنوان فريد يُعطى لكل جهاز على الشبكة",
+            "عنوان يُستخدم لتحديد موقع موقع الويب",
+            "بروتوكول يُستخدم لتبادل البيانات"
+        ],
+        correctAnswer: 1
+    },
+    {
+        question: "أي من الأوامر التالية يُستخدم للتحقق من الاتصال بجهاز آخر في الشبكة؟",
+        answers: [
+            "ipconfig",
+            "ping",
+            "netstat",
+            "tracert"
+        ],
+        correctAnswer: 1
+    },
+    {
+        question: "أي نوع من الكابلات يُعتبر مثاليًا للاستخدام في نقل البيانات عبر مسافات طويلة؟",
+        answers: [
+            "كابل متحد المحور (Coaxial)",
+            "كابل الألياف البصرية",
+            "الكابل المزدوج المجدول",
+            "كابل الطاقة"
+        ],
+        correctAnswer: 1
+    },
+    {
+        question: "ما هو نوع الشبكة التي تربط الأجهزة داخل نفس المبنى أو بين عدة مبانٍ قريبة؟",
+        answers: [
+            "الشبكة الواسعة (WAN)",
+            "الشبكة المحلية (LAN)",
+            "الشبكة الشخصية (PAN)",
+            "شبكة المدينة (MAN)"
+        ],
+        correctAnswer: 1
+    },
+    {
+        question: "أي من الأجهزة التالية يُستخدم لتقسيم الشبكة وتوجيه البيانات بناءً على عناوين MAC؟",
+        answers: [
+            "الموجه (Router)",
+            "المحول (Switch)",
+            "المجمع (Hub)",
+            "نقطة الوصول (Access Point)"
+        ],
+        correctAnswer: 1
+    },
+    {
+        question: "ما هو الغرض من استخدام بروتوكول HTTP؟",
+        answers: [
+            "لنقل الملفات عبر الإنترنت",
+            "لتصفح مواقع الويب",
+            "لتأمين الاتصال عبر الشبكة",
+            "لتعيين عناوين IP للأجهزة"
+        ],
+        correctAnswer: 1
+    },
+    {
+        question: "أي من الأوامر التالية يُستخدم لعرض إعدادات الشبكة في نظام Windows؟",
+        answers: [
+            "ipconfig",
+            "ping",
+            "tracert",
+            "netstat"
+        ],
+        correctAnswer: 0
     }
 ];
 
-// تعديل دالة عرض السؤال لإظهار الصورة إذا كانت موجودة
-function showQuestion() {
-    const questionElement = document.getElementById("question");
-    const questionNumberElement = document.getElementById("question-number");
-    const questionImageElement = document.getElementById("question-image");
-    const questionData = quizData[currentQuestionIndex];
-
-    questionNumberElement.innerText = `السؤال ${currentQuestionIndex + 1} من ${quizData.length}`;
-    questionElement.innerText = questionData.question;
-
-    // تحقق من وجود الصورة
-    if (questionData.image) {
-        questionImageElement.src = questionData.image;
-        questionImageElement.style.display = "block";
-        questionImageElement.style.maxWidth = "100%";
-        questionImageElement.style.height = "auto";
-        questionImageElement.style.margin = "20px auto";
-    } else {
-        questionImageElement.style.display = "none";
-    }
-
-    // باقي كود عرض الإجابات
-}
 
 let currentQuestionIndex = 0;
 let correctAnswers = 0;
